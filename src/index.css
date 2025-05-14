@@ -1,0 +1,87 @@
+@import "tailwindcss";
+:root { 
+    font-family: 'Poppins',sans-serif;
+    background-color: #084771;
+    
+}
+
+@theme{
+    --color-blue-uce: #084771;
+    --color-golden-uce: #A89138;
+}
+
+.markdown h1 {
+    @apply text-3xl font-bold mt-4 mb-2;
+  }
+  
+  .markdown h2 {
+    @apply text-2xl font-semibold mt-3 mb-2;
+  }
+  
+  .markdown h3 {
+    @apply text-xl font-medium mt-2 mb-1;
+  }
+  
+  .markdown p {
+    @apply text-base leading-relaxed mt-2 mb-4 text-gray-700;
+  }
+  
+  .markdown ul {
+    @apply list-disc list-inside pl-4 mt-2 mb-4;
+  }
+  
+  .markdown ol {
+    @apply list-decimal pl-4 mt-2 mb-4;
+  }
+  
+  .markdown li {
+    @apply text-base text-gray-700 mb-1;
+  }
+  
+  .markdown a {
+    @apply text-blue-500 hover:underline;
+  }
+  
+  /* .markdown strong {
+    @apply font-bold text-gray-800;
+  } */
+  
+  .markdown em {
+    @apply italic text-gray-600;
+  }
+  
+  .markdown blockquote {
+    @apply border-l-4 border-gray-400 pl-4 italic text-gray-600 mt-4 mb-4;
+  }
+  
+  .markdown code {
+    @apply bg-gray-300 text-gray-800 rounded px-1 py-0.5 font-mono;
+  }
+  
+  .markdown pre {
+    @apply bg-gray-800 text-white p-4 rounded-lg overflow-x-auto text-sm;
+  }
+  /* Estilos Generales para las Tablas */
+.markdown table {
+  @apply table-auto w-full border-collapse mt-4 mb-4;
+}
+
+.markdown th, .markdown td {
+  @apply border border-gray-300 px-4 py-2 text-left text-sm;
+}
+
+.markdown th {
+  @apply bg-blue-uce text-white font-light;
+}
+
+.markdown tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.markdown tr:hover {
+  @apply bg-gray-200;
+}
+
+.markdown td {
+  @apply text-gray-700;
+}

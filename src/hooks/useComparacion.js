@@ -1,0 +1,44 @@
+import { useState } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY_GEMINI);
+const promptComparacion = import.meta.env.VITE_PROMPT_COMPARACION;
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+export default function useCasoAi() {
+  const [comparacion, setComparacion] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const generarComparacion = async (casoEstudio, auditoriaAI, auditoriaPropia) => {
+    if (!casoEstudio.trim()) {
+      alert("Por favor ingrese un tema de caso de estudio.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const result = await model.generateContent(
+        promptComparacion + "Esta es la auditoria realizada por inteligencia artificial: "+ auditoriaAI + "Esta es la auditoria realizda por el usuario: "+ auditoriaPropia
+      );
+
+      if (result.response?.text) {
+        const text = result.response.text;
+        setComparacion(text);
+      } else {
+        alert("No se obtuvo una respuesta válida del modelo.");
+      }
+    } catch (error) {
+      console.error("Error al hacer la solicitud:", error);
+      alert("Hubo un problema al contactar con el servidor.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return {
+    comparacion,
+    generarComparacion,
+    loading,
+  };
+}
