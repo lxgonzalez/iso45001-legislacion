@@ -6,7 +6,7 @@ Este es un programa que audita sistemas de inteligencia artificial para verifica
 ## ✨ Características  
 
 - 📜 **Cumplimiento de Normas ISO**: Revisión según estándares internacionales.  
-- 📊 **Reportes Visuales**: Gráficos y reportes descargables en PDF.  
+- 📊 **Reportes Visuales**: Reportes descargables en PDF.  
 - 🤖 **Análisis Automatizado**: Detección de áreas de mejora usando IA.  
 - 🌐 **Interfaz Moderna**: Fácil de usar y totalmente responsiva.  
 
@@ -20,7 +20,7 @@ Este es un programa que audita sistemas de inteligencia artificial para verifica
 1. **Clonar el repositorio**:  
    ```bash
    git clone [https://github.com/tu_usuario/auditor-ia.git  ](https://github.com/lxgonzalez/iso45001-legislacion)
-   cd auditor-ia  
+   cd iso45001-legislacion
    ```  
 
 2. **Instalar dependencias**:  
