@@ -1,12 +1,50 @@
-# React + Vite
+🚀 Auditor de IA - Basado en Normas ISO
+Este es un programa que audita sistemas de inteligencia artificial para verificar su cumplimiento con diversas normas ISO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Características
+📜 Cumplimiento de Normas ISO: Revisión según estándares internacionales.
 
-Currently, two official plugins are available:
+📊 Reportes Visuales: Gráficos y reportes descargables en PDF.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🤖 Análisis Automatizado: Detección de áreas de mejora usando IA.
 
-## Expanding the ESLint configuration
+🌐 Interfaz Moderna: Fácil de usar y totalmente responsiva.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ Tecnologías
+⚡ Vite + React: Rápido y eficiente.
+🎨 Tailwind CSS: Estilo moderno y adaptable.
+
+🖥️ Instalación
+Clonar el repositorio:
+
+bash
+Copy
+Edit
+git clone https://github.com/tu_usuario/auditor-ia.git  
+cd auditor-ia  
+Instalar dependencias:
+
+bash
+Copy
+Edit
+npm install  
+Iniciar el proyecto:
+
+bash
+Copy
+Edit
+npm run dev  
+Abre en tu navegador: http://localhost:5173 🚀
+
+Demo
+![image](https://github.com/user-attachments/assets/0b7f0997-9b04-45bb-a254-e69351926085)
+
+
+📝 Uso
+📥 Carga la configuración de la ISO.
+🧠 Agrega datos del sistema de IA a auditar.
+
+🚦 Haz clic en "Auditar" y obtén los resultados.
+
+🤝 Contribuciones
+¡Son bienvenidas! Haz un fork, crea una rama, realiza tus cambios y abre un pull request.
