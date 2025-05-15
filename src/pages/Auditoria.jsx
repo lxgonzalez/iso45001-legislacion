@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Title from '../components/Title.jsx';
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useRecomendaciones from '../hooks/useRecomendaciones.js';
 import useDownloadCase from '../hooks/useDownload.js';
 import remarkGfm from "remark-gfm";
@@ -12,11 +12,11 @@ export default function Auditoria() {
     const { casoEstudio } = location.state || {};
     const { recomendaciones, generarRecomendaciones, loading } = useRecomendaciones();
     const { handleDownloadPDF } = useDownloadCase();
-
     const [auditoriaPropia, setAuditoriaPropia] = useState("");
+    const { isoName } = useParams();
 
     useEffect(() => {
-        generarRecomendaciones(casoEstudio);
+        generarRecomendaciones(casoEstudio,isoName);
     }, [casoEstudio]);
 
     const handleCompare = () => {
@@ -66,9 +66,9 @@ export default function Auditoria() {
                                     <img src="loading.gif" alt="Loading..." className="h-60 w-60" />
                                 </div>
                             )}
-                            <p className='markdown'>
+                            <div className='markdown'>
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{recomendaciones}</ReactMarkdown>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className='flex-1/3'>

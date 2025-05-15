@@ -1,19 +1,21 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useCasoAi from "../hooks/useCasoAI";
 import useDownloadCase from "../hooks/useDownload";
-import Title from './../components/Title.jsx';
 
 export default function CasoAi() {
   const { prompt, casoEstudio, loading, handleInputChange, handleSubmit } = useCasoAi();
   const { handleDownloadPDF } = useDownloadCase();
+  const { isoName } = useParams();
 
   return (
-    <div className="flex flex-col items-center w-full mt-7">
-      <Title title="Caso de Estudio IA" />
-      <form className="w-full max-w-xl mt-7" onSubmit={handleSubmit}>
-        <div className="flex items-center border px-2 rounded-lg shadow focus-within:ring focus-within:ring-blue-uce focus-within:border-blue-uce">
+    <div className="flex flex-col items-center w-full">
+      <form
+        className="w-full max-w-xl mt-7"
+        onSubmit={(event) => handleSubmit(event, isoName)}
+      >        
+      <div className="flex items-center border border-gray-400 px-2 rounded-lg shadow focus-within:ring focus-within:ring-golden-uce focus-within:border-golden-uce">
           <input
             type="text"
             value={prompt}
@@ -23,11 +25,11 @@ export default function CasoAi() {
           />
           <button
             type="submit"
-            className="flex items-center gap-2 px-4 py-2 bg-blue-uce text-white font-light rounded-xl hover:bg-blue-950 transition cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 bg-golden-uce/80 text-white font-light rounded-xl hover:bg-golden-uce transition cursor-pointer"
           >
             Generar
             <svg width="28" height="28">
-              <use href="icons-sprites.svg#stars" />
+              <use href="/icons-sprites.svg#stars" />
             </svg>
           </button>
         </div>
@@ -35,7 +37,7 @@ export default function CasoAi() {
 
       {loading && (
         <div className="flex justify-center items-center my-10 overflow-auto">
-          <img src="loading.gif" alt="Loading..." className="h-96 w-96" />
+          <img src="/loading.gif" alt="Loading..." className="h-96 w-96" />
         </div>
       )}
 
@@ -48,7 +50,7 @@ export default function CasoAi() {
             >
               Descargar
               <svg width="28" height="28" fill="transparent">
-                <use href="icons-sprites.svg#file-download" />
+                <use href="/icons-sprites.svg#file-download" />
               </svg>
             </button>
             <button className="flex items-center gap-2 text-white bg-golden-uce hover:bg-golden-uce/90 p-2 rounded-2xl cursor-pointer">
@@ -59,14 +61,14 @@ export default function CasoAi() {
                 Realizar Auditoría
               </Link>
               <svg width="28" height="28">
-                <use href="icons-sprites.svg#audit-report" />
+                <use href="/icons-sprites.svg#audit-report" />
               </svg>
             </button>
           </div>
           <div className="markdown p-5">
-            <p className="bg-white rounded-xl p-4 max-h-80 overflow-y-auto">
+            <div className="bg-white rounded-xl p-4 max-h-full overflow-y-auto">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>{casoEstudio}</ReactMarkdown>
-            </p>
+            </div>
           </div>
         </section>
       )}

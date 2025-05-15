@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Title from "../components/Title";
 import { useEffect, useState } from "react";
 import useAuditoriaAI from '../hooks/useAuditoriaAI.js';
@@ -14,9 +14,10 @@ export default function Comparar() {
     const { comparacion, generarComparacion } = useComparacion();
     const { handleDownloadPDF } = useDownloadCase();
     const [loadingComparacion, setLoadingComparacion] = useState(false);
+    const { isoName } = useParams();
 
     useEffect(() => {
-        generarAuditoriaAI(casoEstudio)
+        generarAuditoriaAI(casoEstudio, isoName)
     }, [])
 
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function Comparar() {
             generarComparacion(casoEstudio, auditoriaAI, auditoriaPropia)
                 .finally(() => setLoadingComparacion(false));
         }
-    }, [auditoriaAI, loading, casoEstudio, auditoriaPropia]);
+    }, [auditoriaAI]);
 
     return (
         <div className="flex flex-col justify-center items-center gap-4 mb-14">

@@ -9,18 +9,17 @@ export default function useCasoAi() {
   const [recomendaciones, setRecomendaciones] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const generarRecomendaciones = async (casoEstudio) => {
+  const generarRecomendaciones = async (casoEstudio, isoName) => {
     if (!casoEstudio.trim()) {
       alert("Por favor ingrese un tema de caso de estudio.");
       return;
     }
 
     setLoading(true);
-    // setRecomendaciones("Estas son las recomendaciones");
 
     try {
       const result = await model.generateContent(
-        promptRecomendaciones + casoEstudio
+        "Como experto en ISO " + isoName + promptRecomendaciones + casoEstudio
       );
 
       if (result.response?.text) {

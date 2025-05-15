@@ -9,7 +9,7 @@ export default function useCasoAi() {
   const [auditoriaAI, setAuditoriaAI] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const generarAuditoriaAI = async (casoEstudio) => {
+  const generarAuditoriaAI = async (casoEstudio, isoName) => {
     if (!casoEstudio.trim()) {
       alert("Por favor ingrese un tema de caso de estudio.");
       return;
@@ -19,7 +19,7 @@ export default function useCasoAi() {
 
     try {
       const result = await model.generateContent(
-        promptAuditoria + casoEstudio
+        "Realiza una auditoría exhaustiva del caso de estudio considerando: - Cumplimiento con cláusulas 4-10 de ISO "+isoName+promptAuditoria + casoEstudio
       );
 
       if (result.response?.text) {

@@ -14,7 +14,7 @@ export default function useCasoAi() {
     setPrompt(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event, isoName) => {
     event.preventDefault();
 
     if (!prompt) {
@@ -25,7 +25,11 @@ export default function useCasoAi() {
     setLoading(true);
     try {
       const result = await model.generateContent(
-        promptLarge + " Tiene que ser sobre : " + prompt
+        "Genera un caso de estudio detallado sobre la implementación de ISO " +
+          isoName + " "+
+          promptLarge +
+          " Tiene que ser sobre : " +
+          prompt
       );
       if (result.response && typeof result.response.text === "function") {
         const text = await result.response.text();
