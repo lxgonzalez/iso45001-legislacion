@@ -19,7 +19,7 @@ Este es un programa que audita sistemas de inteligencia artificial para verifica
 
 1. **Clonar el repositorio**:  
    ```bash
-   git clone [https://github.com/tu_usuario/auditor-ia.git  ](https://github.com/lxgonzalez/iso45001-legislacion)
+   git clone https://github.com/lxgonzalez/iso45001-legislacion.git
    cd iso45001-legislacion
    ```  
 
