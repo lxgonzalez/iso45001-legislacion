@@ -1,50 +1,50 @@
-🚀 Auditor de IA - Basado en Normas ISO
-Este es un programa que audita sistemas de inteligencia artificial para verificar su cumplimiento con diversas normas ISO
 
-✨ Características
-📜 Cumplimiento de Normas ISO: Revisión según estándares internacionales.
+# 🚀 Auditor de IA - Basado en Normas ISO  
 
-📊 Reportes Visuales: Gráficos y reportes descargables en PDF.
+Este es un programa que audita sistemas de inteligencia artificial para verificar su cumplimiento con diversas normas ISO.  
 
-🤖 Análisis Automatizado: Detección de áreas de mejora usando IA.
+## ✨ Características  
 
-🌐 Interfaz Moderna: Fácil de usar y totalmente responsiva.
+- 📜 **Cumplimiento de Normas ISO**: Revisión según estándares internacionales.  
+- 📊 **Reportes Visuales**: Gráficos y reportes descargables en PDF.  
+- 🤖 **Análisis Automatizado**: Detección de áreas de mejora usando IA.  
+- 🌐 **Interfaz Moderna**: Fácil de usar y totalmente responsiva.  
 
-🛠️ Tecnologías
-⚡ Vite + React: Rápido y eficiente.
-🎨 Tailwind CSS: Estilo moderno y adaptable.
+## 🛠️ Tecnologías  
 
-🖥️ Instalación
-Clonar el repositorio:
+- ⚡ **Vite + React**: Rápido y eficiente.  
+- 🎨 **Tailwind CSS**: Estilo moderno y adaptable.  
 
-bash
-Copy
-Edit
-git clone https://github.com/tu_usuario/auditor-ia.git  
-cd auditor-ia  
-Instalar dependencias:
+## 🖥️ Instalación  
 
-bash
-Copy
-Edit
-npm install  
-Iniciar el proyecto:
+1. **Clonar el repositorio**:  
+   ```bash
+   git clone [https://github.com/tu_usuario/auditor-ia.git  ](https://github.com/lxgonzalez/iso45001-legislacion)
+   cd auditor-ia  
+   ```  
 
-bash
-Copy
-Edit
-npm run dev  
-Abre en tu navegador: http://localhost:5173 🚀
+2. **Instalar dependencias**:  
+   ```bash
+   npm install  
+   ```  
 
-Demo
-![image](https://github.com/user-attachments/assets/0b7f0997-9b04-45bb-a254-e69351926085)
+3. **Iniciar el proyecto**:  
+   ```bash
+   npm run dev  
+   ```  
+
+4. Abre en tu navegador: `http://localhost:5173` 🚀  
+
+## 📝 Uso  
+
+1. 📥 Carga la configuración de la ISO.  
+2. 🧠 Agrega datos del sistema de IA a auditar.  
+3. 🚦 Haz clic en "Auditar" y obtén los resultados.
+
+## 🖼️ Demo  
+![image](https://github.com/user-attachments/assets/9340f716-c75a-420e-8935-a26b0f018453)
 
 
-📝 Uso
-📥 Carga la configuración de la ISO.
-🧠 Agrega datos del sistema de IA a auditar.
+## 🤝 Contribuciones  
 
-🚦 Haz clic en "Auditar" y obtén los resultados.
-
-🤝 Contribuciones
-¡Son bienvenidas! Haz un fork, crea una rama, realiza tus cambios y abre un pull request.
+¡Son bienvenidas! Haz un fork, crea una rama, realiza tus cambios y abre un pull request.  
